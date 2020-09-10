@@ -1,0 +1,22 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract AmulMikBills{
+    string Name;
+    string addrs; 
+    int    quantity;
+    int    money;
+    string consumerId;
+    int day;
+    function AmulMikBills(string newName, string newAddrs, int newQuantity, int newMoney, string newConsumerId, 
+    int newDay) public {
+        
+        Name = newName;
+        addrs = newAddrs;
+        quantity = newQuantity;
+        money = newMoney;
+        day = newDay;
+        consumerId = newConsumerId;
+    }
+    function getAmulMikBills() public view returns(string,string,int,int,string,int) {
+        return(Name, addrs, quantity, money, consumerId, day);
+    }
+}
